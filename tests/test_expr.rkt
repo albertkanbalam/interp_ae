@@ -22,7 +22,7 @@
 (interp (parse '{+ 1 1 1}))
 (interp (parse '{modulo 10 2}))
 (interp (parse '{with {{a 1} {b 2} {c 3}} {+ {- c b} a b c}}))
-(interp (parse '{with {{a 1} {b 2} {c 3}} {expt {- c b} {+ a b c}}}))
+(interp (parse '{with {{a {+ 1 1}} {b 2} {c 3}} {expt {- c b} {+ a b c}}}))
 
 
 

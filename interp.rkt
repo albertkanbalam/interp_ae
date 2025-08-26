@@ -29,9 +29,10 @@
 
              [op (f args)
                  (op f (subst-list args sub-id value))]
-             
+
+             ;; TODO subst en los bindings
              [with (bindings w-body)
-                   (display "with no permitido")]
+                   (with bindings (subst w-body sub-id value))]
              
              [id (v)
                  (if (symbol=? v sub-id)

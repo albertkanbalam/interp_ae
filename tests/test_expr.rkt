@@ -23,3 +23,7 @@
 (interp (parse '{modulo 10 2}))
 (interp (parse '{with {{a 1} {b 2} {c 3}} {+ {- c b} a b c}}))
 (interp (parse '{with {{a {+ 1 1}} {b 2} {c 3}} {expt {- c b} {+ a b c}}}))
+(interp (parse '{with {{a 1}} {with {{b 1} {c 3}} {+ a c b}}}))
+(interp (parse '{with {{a 1}} a}))
+(interp (parse '{with {{x 5}} {+ x {with {{x 3}} 10}}}))
+(interp (parse '{with {{x 5}} {with {{y {- x 3}}} {+ y y}}})) ;; variable libre
